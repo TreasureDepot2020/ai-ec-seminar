@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIで作る、寝てる間に売れる仕組み｜EC物販ビジネスセミナー</title>
+<meta name="description" content="AI学習に専念しているあなたへ。学んだAIをEC物販で稼働させる、両輪戦略の全体像をお伝えする3時間のオンラインセミナー。2026年5月開催・全3回・参加費10,000円。">
+<meta property="og:title" content="AIで作る、寝てる間に売れる仕組み｜EC物販ビジネスセミナー">
+<meta property="og:description" content="AIで自動化を学んだ人が、収入だけ手動なのはおかしい。学んだAIをEC物販で稼働させる、両輪戦略の全体像。">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-base: #FAF7F0;
+  --bg-paper: #FFFFFF;
+  --bg-deep: #1B2845;
+  --bg-deep-soft: #2C3E5C;
+  --ink: #1A1A1A;
+  --ink-soft: #4A4A4A;
+  --ink-muted: #7A7A7A;
+  --line: #E5DDC8;
+  --gold: #B8935E;
+  --gold-deep: #9A7745;
+  --accent-red: #A23E2E;
+  --serif: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --sans: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--bg-base);
+  line-height: 1.85;
+  font-weight: 400;
+  font-feature-settings: "palt";
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-wide {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero */
+.hero {
+  background: var(--bg-deep);
+  color: var(--bg-base);
+  padding: 100px 24px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(184, 147, 94, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(184, 147, 94, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+.hero-eyebrow::before {
+  content: '——';
+  margin-right: 16px;
+  letter-spacing: 0;
+}
+
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 5.5vw, 52px);
+  line-height: 1.45;
+  font-weight: 700;
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+}
+
+.hero-title .highlight {
+  display: inline-block;
+  position: relative;
+  color: var(--gold);
+}
+
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 32px 0;
+}
+
+.hero-subtitle {
+  font-family: var(--serif);
+  font-size: clamp(17px, 2.5vw, 22px);
+  line-height: 1.85;
+  font-weight: 400;
+  color: rgba(250, 247, 240, 0.92);
+  margin-bottom: 16px;
+}
+
+.hero-subtitle-strong {
+  font-family: var(--serif);
+  font-size: clamp(20px, 3vw, 26px);
+  line-height: 1.7;
+  font-weight: 600;
+  color: var(--bg-base);
+  margin-top: 24px;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(184, 147, 94, 0.3);
+}
+
+.hero-meta-item {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: rgba(250, 247, 240, 0.75);
+}
+
+.hero-meta-item strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--gold);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* Hero CTA inline */
+.hero-cta {
+  background: var(--gold);
+  color: var(--bg-deep);
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 18px 56px;
+  display: inline-block;
+  border: 2px solid var(--gold);
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.hero-cta:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+/* Section */
+section {
+  padding: 96px 0;
+}
+
+.section-eyebrow {
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  color: var(--gold-deep);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.section-eyebrow::before {
+  content: '— ';
+  letter-spacing: 0;
+}
+
+.section-eyebrow::after {
+  content: ' —';
+  letter-spacing: 0;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3.5vw, 36px);
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 48px;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.section-title.center::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 24px auto 0;
+}
+
+/* For-You Section */
+.foryou {
+  background: var(--bg-paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.foryou-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.foryou-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+.foryou-item:last-child {
+  border-bottom: none;
+}
+
+.foryou-item::before {
+  content: '✓';
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about-text {
+  font-size: 16px;
+  line-height: 2.1;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+
+.about-text.lead {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 2;
+}
+
+.about-text strong {
+  color: var(--ink);
+  font-weight: 700;
+  background: linear-gradient(transparent 65%, rgba(184, 147, 94, 0.25) 65%);
+  padding: 0 2px;
+}
+
+.about-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+  margin: 48px 0;
+}
+
+/* Benefits */
+.benefits {
+  background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-paper) 100%);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.benefit-card {
+  background: var(--bg-paper);
+  padding: 36px 28px;
+  border: 1px solid var(--line);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(27, 40, 69, 0.08);
+}
+
+.benefit-num {
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.benefit-text {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* Curriculum */
+.curriculum-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.curriculum-item {
+  border-bottom: 1px solid var(--line);
+  padding: 36px 0;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.curriculum-label {
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: var(--gold-deep);
+  font-weight: 500;
+  padding-top: 4px;
+}
+
+.curriculum-content h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.curriculum-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.curriculum-content li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.curriculum-content li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.curriculum-content li.column-row {
+  background: rgba(184, 147, 94, 0.08);
+  padding: 14px 16px 14px 24px;
+  margin: 12px 0;
+  border-left: 3px solid var(--gold);
+  font-family: var(--serif);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.curriculum-content li.column-row::before {
+  content: '◆';
+  left: 8px;
+  font-size: 11px;
+  top: 18px;
+}
+
+/* Policy Section */
+.policy {
+  background: var(--bg-deep);
+  color: var(--bg-base);
+}
+
+.policy .section-eyebrow {
+  color: var(--gold);
+}
+
+.policy .section-title {
+  color: var(--bg-base);
+}
+
+.policy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 56px;
+}
+
+.policy-item {
+  border-left: 2px solid var(--gold);
+  padding-left: 32px;
+}
+
+.policy-item h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.policy-item p {
+  font-size: 15px;
+  line-height: 2;
+  color: rgba(250, 247, 240, 0.88);
+}
+
+/* Profile */
+.profile {
+  background: var(--bg-paper);
+}
+
+.profile-card {
+  background: var(--bg-base);
+  padding: 64px 48px;
+  border: 1px solid var(--line);
+  margin-bottom: 64px;
+}
+
+.profile-photo-wrap {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.profile-photo {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  padding: 4px;
+  background: var(--bg-paper);
+  display: inline-block;
+}
+
+.profile-card-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-name {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3.5vw, 32px);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.profile-name-en {
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: var(--ink-muted);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.profile-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--gold-deep);
+  margin-bottom: 32px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.profile-lead {
+  font-family: var(--serif);
+  font-size: clamp(16px, 2.2vw, 19px);
+  line-height: 2;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+.profile-lead strong {
+  background: linear-gradient(transparent 60%, rgba(184, 147, 94, 0.3) 60%);
+  font-weight: 700;
+  padding: 0 3px;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--gold-deep);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.profile-link:hover {
+  opacity: 0.7;
+}
+
+.profile-section {
+  margin-top: 56px;
+}
+
+.profile-section-label {
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 24px;
+  font-weight: 500;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-list {
+  list-style: none;
+}
+
+.profile-list li {
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--ink-soft);
+  padding: 8px 0 8px 20px;
+  position: relative;
+}
+
+.profile-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.profile-list li strong {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Evidence Image Block */
+.evidence-block {
+  margin: 64px 0;
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.evidence-label {
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.evidence-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.evidence-image-wrap {
+  margin: 32px 0;
+  background: var(--bg-paper);
+  padding: 24px;
+  border: 1px solid var(--line);
+}
+
+.evidence-image-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.evidence-caption {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-muted);
+  margin-top: 16px;
+  padding-left: 16px;
+  border-left: 2px solid var(--line);
+  font-style: italic;
+}
+
+/* Vogue Image Block - Special */
+.vogue-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin: 64px 0;
+}
+
+.vogue-image-wrap {
+  background: var(--bg-paper);
+  padding: 16px;
+  border: 1px solid var(--line);
+}
+
+.vogue-image-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.vogue-text h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.vogue-text p {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--ink-soft);
+}
+
+/* Color Me Block */
+.colorme-block {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 48px 0;
+  padding: 32px;
+  background: var(--bg-paper);
+  border: 1px solid var(--line);
+}
+
+.colorme-image-wrap img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.colorme-text h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.colorme-text p {
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--ink-soft);
+}
+
+/* Detail Section */
+.detail {
+  background: var(--bg-base);
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 32px;
+  background: var(--bg-paper);
+  border: 1px solid var(--line);
+}
+
+.detail-table th,
+.detail-table td {
+  padding: 24px 28px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.detail-table tr:last-child th,
+.detail-table tr:last-child td {
+  border-bottom: none;
+}
+
+.detail-table th {
+  width: 30%;
+  background: var(--bg-base);
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--ink);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.detail-table td {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.85;
+}
+
+.detail-table td strong {
+  font-family: var(--serif);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.schedule-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 16px;
+  background: var(--bg-base);
+  border-left: 3px solid var(--gold);
+}
+
+.schedule-date {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.schedule-time {
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+/* CTA */
+.cta {
+  background: var(--bg-deep);
+  color: var(--bg-base);
+  text-align: center;
+  padding: 96px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(184, 147, 94, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cta-eyebrow {
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.cta-title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 3.5vw, 32px);
+  line-height: 1.65;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cta-subtext {
+  font-size: 15px;
+  color: rgba(250, 247, 240, 0.8);
+  margin-bottom: 48px;
+  line-height: 1.85;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--bg-deep);
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 22px 64px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border: 2px solid var(--gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.cta-note {
+  margin-top: 32px;
+  font-size: 13px;
+  color: rgba(250, 247, 240, 0.6);
+  letter-spacing: 0.05em;
+}
+
+/* FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 48px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.faq-q {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+  padding-left: 32px;
+  position: relative;
+  line-height: 1.65;
+}
+
+.faq-q::before {
+  content: 'Q.';
+  font-family: var(--serif);
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.faq-a {
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--ink-soft);
+  padding-left: 32px;
+  position: relative;
+}
+
+.faq-a::before {
+  content: 'A.';
+  font-family: var(--serif);
+  position: absolute;
+  left: 0;
+  color: var(--ink-muted);
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Notice */
+.notice {
+  background: var(--bg-base);
+  padding: 64px 0;
+}
+
+.notice-list {
+  list-style: none;
+  background: var(--bg-paper);
+  padding: 36px 40px;
+  border: 1px solid var(--line);
+}
+
+.notice-list li {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  padding: 8px 0 8px 20px;
+  position: relative;
+}
+
+.notice-list li::before {
+  content: '※';
+  position: absolute;
+  left: 0;
+  color: var(--ink-muted);
+  font-size: 12px;
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-deep);
+  color: rgba(250, 247, 240, 0.7);
+  padding: 48px 24px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+.footer-name {
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 72px 24px 80px;
+  }
+  
+  section {
+    padding: 64px 0;
+  }
+  
+  .container, .container-wide {
+    padding: 0 20px;
+  }
+  
+  .curriculum-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .curriculum-label {
+    font-size: 12px;
+  }
+  
+  .vogue-block {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .colorme-block {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+  
+  .colorme-image-wrap {
+    text-align: center;
+  }
+  
+  .profile-card {
+    padding: 36px 24px;
+  }
+  
+  .profile-photo {
+    width: 128px;
+    height: 128px;
+  }
+  
+  .detail-table th,
+  .detail-table td {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+  }
+  
+  .detail-table th {
+    border-bottom: none;
+    padding-bottom: 8px;
+  }
+  
+  .detail-table td {
+    padding-top: 0;
+  }
+  
+  .cta-button {
+    padding: 18px 40px;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+  }
+  
+  .hero-meta {
+    gap: 16px;
+  }
+  
+  .hero-meta-item {
+    flex: 1 1 auto;
+    min-width: 120px;
+  }
+  
+  .notice-list {
+    padding: 24px 24px 24px 28px;
+  }
+  
+  .evidence-block {
+    margin: 40px 0;
+    padding: 32px 0;
+  }
+  
+  .evidence-image-wrap {
+    padding: 12px;
+  }
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-eyebrow,
+.hero-title,
+.hero-divider,
+.hero-subtitle,
+.hero-subtitle-strong,
+.hero-meta {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.hero-eyebrow { animation-delay: 0.1s; }
+.hero-title { animation-delay: 0.3s; }
+.hero-divider { animation-delay: 0.5s; }
+.hero-subtitle { animation-delay: 0.6s; }
+.hero-subtitle-strong { animation-delay: 0.8s; }
+.hero-meta { animation-delay: 1.0s; }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">EC BUSINESS SEMINAR｜2026.05</div>
+    <h1 class="hero-title">
+      AIで作る、<br>
+      <span class="highlight">寝てる間に売れる仕組み</span>。<br>
+      EC物販ビジネス。
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">
+      AIで自動化を学んだ人が、<br>
+      収入だけ「手動」なのは、もったいない。
+    </p>
+    <p class="hero-subtitle-strong">
+      学んだAIをEC物販で稼働させる、<br>
+      「両輪戦略」の全体像をお渡しします。
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <strong>Format</strong>
+        Zoom Online
+      </div>
+      <div class="hero-meta-item">
+        <strong>Duration</strong>
+        3時間程度
+      </div>
+      <div class="hero-meta-item">
+        <strong>Fee</strong>
+        ¥10,000
+      </div>
+      <div class="hero-meta-item">
+        <strong>Capacity</strong>
+        各回10名程度
+      </div>
+    </div>
+    <div style="margin-top: 48px; text-align: center;">
+      <a href="https://sns109.jp/p/r/SsZv2ElG" class="cta-button hero-cta" target="_blank" rel="noopener">お申込みはこちら</a>
+      <p style="margin-top: 16px; font-size: 12px; color: rgba(250, 247, 240, 0.6); letter-spacing: 0.05em;">日程はお申込みフォームでお選びいただけます</p>
+    </div>
+  </div>
+</header>
+
+<!-- For You -->
+<section class="foryou">
+  <div class="container">
+    <div class="section-eyebrow">FOR YOU</div>
+    <h2 class="section-title">こんなあなたへ</h2>
+    <ul class="foryou-list">
+      <li class="foryou-item">AI学習を続けているが、収益化につながっていない方</li>
+      <li class="foryou-item">AI関連の発信を続けても、反応が伸びにくくなったと感じる方</li>
+      <li class="foryou-item">AI学習に投じた金額のうち、回収できた金額が見合っていない方</li>
+      <li class="foryou-item">AI界隈の「教える側ビジネス」の天井に、薄々気づき始めた方</li>
+      <li class="foryou-item">AIだけでなく、リアルな商売の柱が必要だと感じ始めた方</li>
+      <li class="foryou-item">学んだAIスキルを、現金に変える経路を探している方</li>
+    </ul>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about">
+  <div class="container">
+    <div class="section-eyebrow">ABOUT</div>
+    <h2 class="section-title">このセミナーは何か</h2>
+    <p class="about-text lead">
+      AI学習に専念してきたあなたに向けて、<br>
+      <strong>EC物販ビジネス</strong>と<strong>AI活用</strong>の<br>
+      <strong>両輪戦略の全体像</strong>をお伝えするセミナーです。
+    </p>
+
+    <div class="about-divider"></div>
+
+    <p class="about-text">
+      私は普段、AI関連のセミナーで<strong>ツールの実演や具体的な操作デモ</strong>を行っています。<br>
+      しかし、今回のセミナーでは、AIツールの実演やデモは<strong>一切行いません</strong>。
+    </p>
+    <p class="about-text">
+      理由は明確です。
+    </p>
+    <p class="about-text">
+      今回の主旨は、AI学習者であるあなたに、<br>
+      <strong>AIだけではない「もう一つの輪」に頭を切り替えていただくこと</strong>だからです。<br>
+      両輪戦略の必要性を、まず認識していただくことが、すべての出発点になります。
+    </p>
+    <p class="about-text">
+      お渡しするのは、<strong>学んだAIを「どこで使うか」の地図</strong>です。
+    </p>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+  <div class="container">
+    <div class="section-eyebrow">BENEFITS</div>
+    <h2 class="section-title">このセミナーで得られるもの</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-num">01</div>
+        <p class="benefit-text">AI×EC物販の両輪が必要だという気づき</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">02</div>
+        <p class="benefit-text">Amazon物販における「メーカー仕入れ」と「OEM」の違いの理解</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">03</div>
+        <p class="benefit-text">AI学習者だからこそ活かせる、4つの工程の地図</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">04</div>
+        <p class="benefit-text">講師の実例から学ぶ、信頼関係とブランド化の重要性</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">05</div>
+        <p class="benefit-text">セミナー後すぐに行動に移せる、具体的な方向性</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Curriculum -->
+<section>
+  <div class="container">
+    <div class="section-eyebrow">CURRICULUM</div>
+    <h2 class="section-title">セミナーカリキュラム</h2>
+    <div class="curriculum-list">
+      <div class="curriculum-item">
+        <div class="curriculum-label">OPENING</div>
+        <div class="curriculum-content">
+          <h3>オープニング</h3>
+          <ul>
+            <li>本日の方針説明</li>
+            <li>AIツールのデモを行わない理由</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="curriculum-item">
+        <div class="curriculum-label">PART 01</div>
+        <div class="curriculum-content">
+          <h3>なぜAI学習者にこそEC物販なのか</h3>
+          <ul>
+            <li>AI市場で起きている構造的変化</li>
+            <li>AI学習者がEC物販を選ぶ3つの理由</li>
+            <li>講師の立ち位置（独立から現在まで）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="curriculum-item">
+        <div class="curriculum-label">PART 02</div>
+        <div class="curriculum-content">
+          <h3>Amazon出店の全体像とメーカー仕入れ</h3>
+          <ul>
+            <li>Amazonマーケットプレイスの基本構造</li>
+            <li>なぜ国内メーカー仕入れが答えなのか</li>
+            <li>始める前の準備の概要</li>
+            <li>メーカー交渉のリアル</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="curriculum-item">
+        <div class="curriculum-label">PART 03</div>
+        <div class="curriculum-content">
+          <h3>Amazon FBAという自動販売機</h3>
+          <ul>
+            <li>FBAとは何か</li>
+            <li>「自動販売機」を持つという発想</li>
+            <li>AI学習者の自動化思考と物販構造の親和性</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="curriculum-item">
+        <div class="curriculum-label">PART 04</div>
+        <div class="curriculum-content">
+          <h3>価格競争を超える、OEM展開</h3>
+          <ul>
+            <li>メーカー仕入れの先にある「自分ブランド」</li>
+            <li>OEMで成功する5つのポイント</li>
+            <li>商品ページとSEO・広告の世界</li>
+            <li class="column-row">コラム前編：講師の実例（中間型OEMとブランド化の物語）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="curriculum-item">
+        <div class="curriculum-label">PART 05</div>
+        <div class="curriculum-content">
+          <h3>学んだAIが効く、4つの工程</h3>
+          <ul>
+            <li>商品リサーチで、あなたのAIに何を問うか</li>
+            <li>メーカー交渉文面の磨き方の観点</li>
+            <li>Amazonスポンサープロダクト広告の分析</li>
+            <li>商品ページ・SNS・コンテンツ生成</li>
+            <li class="column-row">コラム後編：すべてを統合した実装例（AI×OEM×Amazon×独自サイト）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="curriculum-item">
+        <div class="curriculum-label">CLOSING</div>
+        <div class="curriculum-content">
+          <h3>まとめ・結び</h3>
+          <ul>
+            <li>全体のまとめと補足</li>
+            <li>今日からの行動の選択肢</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="curriculum-item">
+        <div class="curriculum-label">Q&A</div>
+        <div class="curriculum-content">
+          <h3>質疑応答</h3>
+          <ul>
+            <li>時間の許す限り、丁寧にお答えします</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Policy -->
+<section class="policy">
+  <div class="container">
+    <div class="section-eyebrow">SEMINAR POLICY</div>
+    <h2 class="section-title">このセミナーの3つの方針</h2>
+    <div class="policy-list">
+      <div class="policy-item">
+        <h3>01. AIツールのデモは行いません</h3>
+        <p>
+          私は普段、AI関連のセミナーでは実演や具体的なツール操作のデモを行っています。<br>
+          しかし、今回のセミナーでは、AIツールの実演やデモは一切ありません。<br><br>
+          AI学習に取り組んでいるあなたは、すでにAIの使い方を熟知されています。<br>
+          私から具体的なツール操作をお伝えするのは、失礼にあたると考えています。<br>
+          本セミナーでお渡しするのは、<strong>学んだAIを「どこで使うか」の地図</strong>です。
+        </p>
+      </div>
+      <div class="policy-item">
+        <h3>02. 物販の細かい実装手順は、本に譲ります</h3>
+        <p>
+          私が<strong>自信を持って推薦できる、3冊の名著</strong>があります。<br>
+          セミナー内で、それぞれの本の存在と役割をご紹介します。<br>
+          細かい手順は、その本に体系化されています。<br>
+          <strong>セミナー＋書籍の組み合わせ</strong>で、最も効率的に学べる設計にしています。
+        </p>
+      </div>
+      <div class="policy-item">
+        <h3>03. バックエンド販売はありません</h3>
+        <p>
+          セミナーの最後に、高額講座やコンサルへの誘導はありません。<br>
+          本日は、<strong>知識と地図をお渡しすること</strong>だけが目的です。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Profile -->
+<section class="profile">
+  <div class="container">
+    <div class="section-eyebrow">INSTRUCTOR</div>
+    <h2 class="section-title">講師について</h2>
+
+    <div class="profile-card">
+      <div class="profile-photo-wrap">
+        <img src="kunishige-profile.png" alt="國重 公秀" class="profile-photo" loading="lazy">
+      </div>
+      <div class="profile-card-header">
+        <h3 class="profile-name">國重 公秀</h3>
+        <p class="profile-name-en">KUNISHIGE KIMIHIDE</p>
+        <p class="profile-title">生成AIコンサルタント ／ KUNISHIGE Lab 代表</p>
+      </div>
+
+      <p class="profile-lead">
+        飲食業界で<strong>31年</strong>、現場から役員までを経験し、<br>
+        売上<strong>16億円から300億円</strong>への企業成長を牽引。<br><br>
+        現在はその経営視点と最新技術を掛け合わせ、<br>
+        「AI×Notion」に特化した生成AIコンサルタントとして活動。<br>
+        NPO法人、一般法人、物販店オーナー様の業務効率化と収益化を支援しつつ、<br>
+        自身も<strong>「1日3時間の労働で安定収益を上げる」</strong>ライフスタイルを実践中。
+      </p>
+
+      <a href="https://www.aixnotion.com/about" target="_blank" rel="noopener" class="profile-link">
+        KUNISHIGE Lab について詳しく見る →
+      </a>
+
+      <!-- 経歴：実業 -->
+      <div class="profile-section">
+        <div class="profile-section-label">CAREER｜実業の歩み</div>
+        <ul class="profile-list">
+          <li>東証スタンダード市場の上場企業（食品分野）に23年間在籍</li>
+          <li>営業・購買物流・人事総務 各部門の<strong>部門長を歴任</strong></li>
+          <li><strong>34歳でホールディングス執行役員</strong>に就任</li>
+          <li><strong>36歳で100％子会社の取締役</strong>に就任</li>
+          <li>店頭公開→東証二部上場→東証一部の準備期にあたり、<strong>会社が激変するフェーズを内側で経験</strong></li>
+          <li><strong>売上16億円から300億円</strong>への成長フェーズを、経営側で経験</li>
+          <li><strong>梅の花（物販店）50店舗の第1号店プロデュース</strong>を担当（2025年4月末時点で50店舗に拡大）</li>
+          <li>2018年（50歳）、退職して独立</li>
+        </ul>
+      </div>
+
+      <!-- 実績：EC物販の実装 -->
+      <div class="profile-section">
+        <div class="profile-section-label">EC BUSINESS｜EC物販の実装</div>
+        <ul class="profile-list">
+          <li>独立後、Amazon物販を体系的に学ぶため、<strong>福岡から東京に毎月通い、約2年間学習</strong>（自己投資<strong>100万円以上</strong>）</li>
+          <li>健康茶のメーカーさんと連携し、<strong>中間型OEM商品を実装</strong>（現在も継続中）</li>
+          <li>世界的ファッション雑誌「VOGUE JAPAN」記事で、私が<strong>ゼロから開発した商品</strong>が紹介</li>
+          <li>GMOペパボ・カラーミーショップ<strong>公認取次店</strong>として認定</li>
+          <li>カラーミーショップ福岡支店で「ネットショップを効率化するためのAI活用術」セミナーを実施</li>
+        </ul>
+      </div>
+
+      <!-- 学習・資格：AI関連 -->
+      <div class="profile-section">
+        <div class="profile-section-label">AI ACADEMICS｜学習・資格</div>
+        <ul class="profile-list">
+          <li>James Skinner氏主宰「AI Super Human」に第1回から継続参加し、最新のAI情報を週次で学習中</li>
+          <li>プロンプトスクール「飛翔」 公認管理人</li>
+          <li>生成AIプロンプトエンジニア</li>
+          <li>生成AIパスポート</li>
+          <li>Google AI Essentials</li>
+          <li>Notionアカデミー上級コース修了</li>
+          <li>東京大学「AI経営講座」修了</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Evidence: Amazon Sales -->
+    <div class="evidence-block">
+      <div class="evidence-label">EVIDENCE 01｜Amazon売上実績</div>
+      <h3 class="evidence-title">Amazonでの売上実績（2019年10月〜2021年10月）</h3>
+      <div class="evidence-image-wrap">
+        <img src="amazon-sales-2years.png" alt="過去2年間のAmazon売上 67,195,120円" loading="lazy">
+      </div>
+      <p class="evidence-caption">
+        メーカー仕入れを開始してから約1〜3年目の実績データ。<br>
+        50代で会社を辞め、全く違う業種・業態に転身した1人が、コツコツと積み重ねた結果として、現実に起きている事実をお見せしています。
+      </p>
+    </div>
+
+    <!-- Evidence: Vogue -->
+    <div class="evidence-block">
+      <div class="evidence-label">EVIDENCE 02｜メディア掲載</div>
+      <div class="vogue-block">
+        <div class="vogue-image-wrap">
+          <img src="vogue-suginaryu.png" alt="VOGUE JAPAN「白髪、二枚爪にはスギナのサプリで対策を。」掲載ページ" loading="lazy">
+        </div>
+        <div class="vogue-text">
+          <h3>世界的ファッション雑誌「VOGUE JAPAN」記事掲載</h3>
+          <p>
+            私が<strong>ゼロから開発した商品</strong>が、VOGUE JAPANの記事の中で紹介されました。<br><br>
+            広告費を払ったわけでも、コネクションを使ったわけでもありません。<br>
+            ブランド化の積み重ねの結果として、自然に取り上げていただきました。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Evidence: Color Me -->
+    <div class="evidence-block">
+      <div class="evidence-label">EVIDENCE 03｜業界からの認定</div>
+      <div class="colorme-block">
+        <div class="colorme-image-wrap">
+          <img src="colorme-partner-badge.png" alt="カラーミーショップ公認取次店バナー" loading="lazy">
+        </div>
+        <div class="colorme-text">
+          <h3>GMOペパボ・カラーミーショップ 公認取次店</h3>
+          <p>
+            GMOペパボ・カラーミーショップの公認取次店として認定されています。<br>
+            他のショップオーナーの皆さまにAI活用やEC運営をお伝えする立場として、業界からも信頼をいただいています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detail -->
+<section class="detail">
+  <div class="container">
+    <div class="section-eyebrow">DETAILS</div>
+    <h2 class="section-title">開催概要</h2>
+
+    <table class="detail-table">
+      <tr>
+        <th>形式</th>
+        <td>Zoom Online</td>
+      </tr>
+      <tr>
+        <th>所要時間</th>
+        <td>3時間程度（質疑応答により延長の可能性あり）</td>
+      </tr>
+      <tr>
+        <th>参加費</th>
+        <td><strong>10,000円</strong>（税込）</td>
+      </tr>
+      <tr>
+        <th>定員</th>
+        <td>各回10名程度</td>
+      </tr>
+      <tr>
+        <th>開催日程<br>（全3回・同じ内容）</th>
+        <td>
+          <ul class="schedule-list">
+            <li class="schedule-item">
+              <span class="schedule-date">2026年5月23日（土）</span>
+              <span class="schedule-time">13:00〜</span>
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-date">2026年5月26日（火）</span>
+              <span class="schedule-time">13:00〜</span>
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-date">2026年5月29日（金）</span>
+              <span class="schedule-time">21:00〜</span>
+            </li>
+          </ul>
+          <p style="margin-top: 16px; font-size: 13px; color: var(--ink-muted);">
+            ※ ご都合の良い日程をお選びください。
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- CTA Primary -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">APPLY NOW</div>
+    <h2 class="cta-title">
+      あなたの学んだAIを、<br>
+      「稼働する仕組み」に変えるために。
+    </h2>
+    <p class="cta-subtext">
+      日程は、お申込みフォームでお選びいただけます。
+    </p>
+    <a href="https://sns109.jp/p/r/SsZv2ElG" class="cta-button" target="_blank" rel="noopener">お申込みはこちら</a>
+    <p class="cta-note">特定商取引法に基づく表記・プライバシーポリシーは、お申込みページ内に記載しています。</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">よくある質問</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">AIをまったく使ったことがない人でも参加できますか？</p>
+        <p class="faq-a">本セミナーは、AI学習に取り組んでいる方を主な対象としています。AIをまったく使ったことがない方には、別の入門セミナーをおすすめします。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">物販経験がなくても参加できますか？</p>
+        <p class="faq-a">物販経験は問いません。むしろ未経験者の方が、構造を一からお伝えできるので、お役に立ちやすいと考えています。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">このセミナーだけで物販を始められますか？</p>
+        <p class="faq-a">本セミナーは「全体像と地図」をお渡しする内容です。実装の詳細は、私が信頼する3冊の名著に体系化されています。セミナー受講後、それらの本を順序立てて読み進めることで、実装に進むことができます。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">AIツールの実演やデモはありますか？</p>
+        <p class="faq-a">ありません。私は普段のAIセミナーでは実演やデモを行っていますが、今回のセミナーでは一切行いません。AI学習者であるあなたが、AIの使い方を熟知されているからです。お渡しするのは、学んだAIを「どこで使うか」の地図です。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">セミナー後に高額講座やコンサルへの勧誘はありますか？</p>
+        <p class="faq-a">ありません。本セミナーは、知識と地図をお渡しすることだけが目的です。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">紹介される3冊の本は、事前に読む必要がありますか？</p>
+        <p class="faq-a">事前に読む必要はありません。セミナーの中で、それぞれの本の役割と読む順序をお伝えします。<br>※ 本はセミナーでお渡しするものではなく、受講後に<strong>必要に応じて</strong>、あなた自身でご購入いただく形です。書店またはオンラインストアでご入手ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Secondary -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">FINAL STEP</div>
+    <h2 class="cta-title">
+      迷っているうちに、<br>
+      AIだけが進化していきます。
+    </h2>
+    <p class="cta-subtext">
+      ご都合の良い日程をお選びください。<br>
+      全3回、内容は同じです。
+    </p>
+    <a href="https://sns109.jp/p/r/SsZv2ElG" class="cta-button" target="_blank" rel="noopener">お申込みはこちら</a>
+  </div>
+</section>
+
+<!-- Notice -->
+<section class="notice">
+  <div class="container">
+    <div class="section-eyebrow">IMPORTANT</div>
+    <h2 class="section-title">注意事項</h2>
+    <ul class="notice-list">
+      <li>セミナー内容の録画・録音・スクリーンショットの撮影はご遠慮ください。</li>
+      <li>やむを得ない事情により開催日程を変更する場合があります。</li>
+      <li>セミナー資料は開催時に共有予定です。</li>
+      <li>キャンセルポリシー、特定商取引法に基づく表記、プライバシーポリシーは、お申込みフォーム内に記載しています。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-name">KUNISHIGE Lab</div>
+  <div>© 2026 KUNISHIGE Lab All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
